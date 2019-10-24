@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="calculator_smoke" parallel="false">
+    <groups>
+        <run>
+            <include name="smoke"></include>
+        </run>
+    </groups>
+    <test name="smoke" verbose="10">
+        <packages>
+            <package name="com.epam.vsharstuk.testing.*"/>
+        </packages>
+    </test>
+</suite>
