@@ -1,16 +1,24 @@
 package com.epam.vsharstuk.testing.impl;
 
+import com.epam.vsharstuk.calculatorng.impl.CalculatorNgImpl;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import static org.testng.AssertJUnit.assertFalse;
 
-public class CalculatorImplNegotiveTest {
+public class CalculatorImplNegotiveTestNgTest {
 
     private Double prioritizedParameter = 0.0;
     private final static Double CONSTANT = 10.0;
     private final static Double DELTA_CONSTANT = 2.0;
+    private CalculatorNgImpl calculator;
+
+    @BeforeClass
+    public void init() {
+        calculator = new CalculatorNgImpl();
+    }
 
     @Test(priority = 3)
     public void additionIncorrect() {
